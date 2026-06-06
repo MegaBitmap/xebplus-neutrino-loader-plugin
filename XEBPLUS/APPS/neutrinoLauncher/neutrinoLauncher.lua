@@ -1332,7 +1332,7 @@ function NEUTRINO_ContextMenu()
 		if NEUTRINO_PathPrefix == "ata" then
 			ContextMenu_EnableAltBSD = true
 			ContextMenu_EnableATANet = true
-		elseif NEUTRINO_PathPrefix == "udpbd" then
+		elseif NEUTRINO_PathPrefix == "udpbd" or NEUTRINO_PathPrefix == "udpfs" then
 			ContextMenu_EnableAltBSD = true
 			ContextMenu_EnableUDPBDHDD = true
 		end
@@ -1976,9 +1976,11 @@ while XEBKeepInSubMenu do
 			if string.match(NEUTRINO_PathPrefix, "ata") and string.match(NEUTRINO_LaunchOptions, "(.*)atanet(.*)") then
 				NEUTRINO_LaunchOptions = string.sub(NEUTRINO_LaunchOptions, 7, string.len(NEUTRINO_LaunchOptions))
 				NEUTRINO_Bsd = " -bsd=ata-net"
-			elseif string.match(NEUTRINO_PathPrefix, "udpbd") and string.match(NEUTRINO_LaunchOptions, "(.*)udpbdhdd(.*)") then
-				NEUTRINO_LaunchOptions = string.sub(NEUTRINO_LaunchOptions, 9, string.len(NEUTRINO_LaunchOptions))
-				NEUTRINO_Bsd = " -bsd=udpbd-hdd"
+			elseif string.match(NEUTRINO_PathPrefix, "udpbd") or string.match(NEUTRINO_PathPrefix, "udpfs") then
+				if string.match(NEUTRINO_LaunchOptions, "(.*)udpbdhdd(.*)") then
+					NEUTRINO_LaunchOptions = string.sub(NEUTRINO_LaunchOptions, 9, string.len(NEUTRINO_LaunchOptions))
+					NEUTRINO_Bsd = " -bsd="..NEUTRINO_PathPrefix.."-hdd"
+				end
 			end
 
 			System.removeFile(xebLua_AppWorkingPath.."radshellmod.ios")

@@ -39,8 +39,8 @@ internal partial class NotificationTray : ApplicationContext
     public const string oldSettings = "OldSettings.ini";
     public const string vhdxFile = "PS2-Games-exFAT-udpbd.vhdx";
     public const string vhdxLabel = "PS2-exFAT";
-    private const string pythonFolderDLL = @"\Python313\python313.dll";
-    private const string pythonVersion = "3.13";
+    private const string pythonFolderDLL = @"\Python314\python314.dll";
+    private const string pythonVersion = "3.14";
     private const int listenPort = 0x4712;
     public static StringBuilder conHistory = new();
     private CustomConsole? customConsole;

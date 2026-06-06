@@ -32,7 +32,7 @@ It is NOT recommended to mismatch different versions of the XEBPLUS plugin and t
 
   * A PlayStation 2 console with a memory card that has either FreeMCBoot or PS2BBL installed.  
 [PS2BBL](https://israpps.github.io/PlayStation2-Basic-BootLoader/) is the recommended option.
-  * If using ListBuilder or UDPFS, a computer with [Python](https://www.python.org/) 3.13 installed.  
+  * If using ListBuilder or UDPFS, a computer with [Python](https://www.python.org/) 3.14 installed.  
   * All of the requirements specific to the device you want to load games from.
 
 ### UDPBD/UDPFS
@@ -653,7 +653,7 @@ https://www.psx-place.com/threads/xtremeeliteboot-s-dashboard-special-xmas-showc
 PS2Dev Team - ps2client - 2024-8-5  
 https://github.com/ps2dev/ps2client
 
-Rick Gaiser - neutrino - v1.8.0-41-g0a7634c  
+Rick Gaiser - neutrino - v1.8.0-47-g06188cc  
 https://github.com/rickgaiser/neutrino
 
 sync-on-luma - neutrinoHDD plugin for XEB+ - forked from v2.9.7  
